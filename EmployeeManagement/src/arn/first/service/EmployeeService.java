@@ -20,4 +20,11 @@ public class EmployeeService implements EmployeeServiceIn {
 		return result;
 	}
 
+	public boolean insertEmployees(EmployeePojo ep) throws ClassNotFoundException, SQLException {
+		boolean fl= ed.insertEmployees(ep);
+		if(fl)
+			return true;
+		return false;
+	}
+
 }

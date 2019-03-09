@@ -7,4 +7,5 @@ import arn.first.entity.EmployeePojo;
 
 public interface EmployeeDao {
 	ArrayList<EmployeePojo> getAllEmployees()throws ClassNotFoundException, SQLException ;
+	boolean insertEmployees(EmployeePojo ep) throws ClassNotFoundException,SQLException;
 }

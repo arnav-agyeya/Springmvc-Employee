@@ -28,4 +28,21 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		return result;
 	}
 
+	public boolean insertEmployees(EmployeePojo ep) throws ClassNotFoundException, SQLException {
+		
+		Connection connection = JDBCConnection.getConnection();
+		PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO NEWEMPLOYEE VALUES(?,?,?,?,?)");
+		preparedStatement.setString(1, ep.geteId());
+		preparedStatement.setString(2, ep.geteName());
+		preparedStatement.setString(3, ep.getDesignation());
+		preparedStatement.setString(4, ep.getDeoartment());
+		preparedStatement.setLong(5, ep.getBasic());
+		
+		int f=preparedStatement.executeUpdate();
+		
+		if(f==0) 
+			return false;
+		return true;
+	}
+
 }

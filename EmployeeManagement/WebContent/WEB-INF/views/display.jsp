@@ -18,7 +18,7 @@ for(EmployeePojo emp:empList){
            <td><% out.println(emp.getDesignation()); %></td>
            <td><% out.println(emp.getDeoartment()); %></td>
            <td><% out.println(emp.getBasic()); %></td>
-     <tr>
+     <tr><br><br>
 
 <%} %>
 
